@@ -17,12 +17,12 @@ echo "Graylog webinterface seems to be ready ready"
 sleep 5 # Just to be safe... 
 
 echo "---- system ----"
-curl --silent -u $USER:$PASSWORD http://localhost:12900/system | jq '.'
+curl --silent -u $USER:$PASSWORD http://localhost:12900/system 
 echo "----------------"
 echo ""
 
 echo "---- service-manager ----"
-curl --silent -u $USER:$PASSWORD http://localhost:12900/system/serviceManager | jq '.'
+curl --silent -u $USER:$PASSWORD http://localhost:12900/system/serviceManager 
 echo "-------------------------"
 echo ""
 
