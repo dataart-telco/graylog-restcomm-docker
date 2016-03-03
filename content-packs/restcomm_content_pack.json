@@ -1,0 +1,84 @@
+{
+  "id" : null,
+  "name" : "Restcomm",
+  "description" : "Restcomm",
+  "category" : "restcomm",
+  "inputs" : [ ],
+  "streams" : [ {
+    "id" : "56d812cfe4b09b764f22144e",
+    "title" : "Restcomm",
+    "description" : "Restcomm",
+    "disabled" : false,
+    "outputs" : [ ],
+    "stream_rules" : [ {
+      "type" : "EXACT",
+      "field" : "source",
+      "value" : "restcomm",
+      "inverted" : false
+    } ]
+  } ],
+  "outputs" : [ ],
+  "dashboards" : [ {
+    "title" : "Restcomm",
+    "description" : "Restcomm",
+    "dashboard_widgets" : [ {
+      "description" : "LiveCalls",
+      "type" : "FIELD_CHART",
+      "configuration" : {
+        "valuetype" : "max",
+        "timerange" : {
+          "type" : "relative",
+          "range" : 300
+        },
+        "renderer" : "bar",
+        "interpolation" : "linear",
+        "field" : "LiveCalls",
+        "stream_id" : "56d812cfe4b09b764f22144e",
+        "query" : "*",
+        "interval" : "minute"
+      },
+      "col" : 0,
+      "row" : 0,
+      "cache_time" : 10
+    }, {
+      "description" : "LoadCalls",
+      "type" : "FIELD_CHART",
+      "configuration" : {
+        "valuetype" : "max",
+        "timerange" : {
+          "type" : "relative",
+          "range" : 300
+        },
+        "renderer" : "bar",
+        "interpolation" : "linear",
+        "field" : "LoadCalls",
+        "stream_id" : "56d812cfe4b09b764f22144e",
+        "query" : "*",
+        "interval" : "minute"
+      },
+      "col" : 0,
+      "row" : 0,
+      "cache_time" : 10
+    }, {
+      "description" : "CompletedCalls",
+      "type" : "FIELD_CHART",
+      "configuration" : {
+        "valuetype" : "max",
+        "timerange" : {
+          "type" : "relative",
+          "range" : 300
+        },
+        "renderer" : "bar",
+        "interpolation" : "linear",
+        "field" : "CompletedCalls",
+        "stream_id" : "56d812cfe4b09b764f22144e",
+        "query" : "*",
+        "interval" : "minute"
+      },
+      "col" : 0,
+      "row" : 0,
+      "cache_time" : 10
+    } ]
+  } ],
+  "grok_patterns" : [ ]
+}
